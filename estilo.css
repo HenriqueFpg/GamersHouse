@@ -1,0 +1,424 @@
+body{
+    margin: 0;
+    background-image: url(imagens/background.gif);
+    background-size: contain;
+    background-attachment: fixed;
+    color: rgb(177, 10, 10);
+}
+header{
+    width: 100%;
+    height: 200px;
+    padding-top: 10px;
+}
+#logo{
+    position: relative;
+    margin: 10px;
+    left: 50%;    
+    width: 600px;
+    height: 150px;
+    margin-left: -300px;
+}
+#logo img{
+    height: 150px;
+    width: 110px;
+    float: left;
+}
+#logo h1{
+    font-size: 65px;
+    margin: 0;
+    background: -webkit-linear-gradient(right, rgb(17, 17, 17), red);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 150px;
+}
+#menu{
+    position: relative;
+    top: -30px;
+    width: 100%;
+    background-color: rgb(22, 22, 22);
+}
+#menu ul{
+    width: 500px;
+    position: relative;
+    margin-left: -275px;
+    left: 50%;
+    margin-top: 10px;
+}
+#menu ul li{
+    display: inline-block; 
+    transition: 1s ease;
+}
+#menu ul li a{
+    text-decoration: none;
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 50px;
+    line-height: 50px;
+    font-family: fantasy;
+    font-size: 22px;
+    letter-spacing: 1px;
+}
+a:link, a:visited{
+    color: rgb(177, 10, 10);
+    text-decoration: none;
+}
+#menu ul li:hover{
+    background-color: rgb(19, 4, 4);
+}
+#corpo{
+    position: relative;
+    top: -46px;
+    left: 50%;  
+    width: 820px;
+    margin-left: -400px;
+    background-color: rgb(12, 8, 8);
+    min-height: calc(100% - 147px);
+}
+#galeria{
+    width: 820px;
+    height: 350px;
+    position: relative;
+    overflow: hidden;
+    background-color: black;
+}
+.foto{
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    margin-left: -225px;
+    opacity: 0;
+    width: 450px;
+    height: 290px;
+    animation-name: animacao;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes animacao{
+    25%{
+        opacity: 1;
+        transform: scale(1.1, 1.1);
+    }
+    50%{
+        opacity: 0;
+    }
+}
+
+.foto:nth-child(4){
+    animation-delay: 5s;
+}
+
+.foto:nth-child(7){
+    animation-delay: 10s;
+}
+
+.promocao{
+    position: absolute;
+    left: 23%;
+    top: -15px;
+    opacity: 0;
+    animation: animacao 15s infinite;
+    background: -webkit-linear-gradient(left, rgb(103, 16, 218), red);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.promocao:nth-child(5){
+    animation-delay: 5s;
+}
+.promocao:nth-child(8){
+    animation-delay: 10s;
+}
+
+.promocao2{
+    position: absolute;
+    left: 75%;
+    top: 75%;
+    opacity: 0;
+    animation: animacao 15s infinite;
+    background: -webkit-linear-gradient(right, rgb(14, 16, 124), rgb(255, 0, 34));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.promocao2:nth-child(6){
+    animation-delay: 5s;
+}
+.promocao2:nth-child(9){
+    animation-delay: 10s;
+}
+
+#footer{
+    position: fixed;
+    top:95.1%;
+    height: 50px;
+    width: 100%;
+    background-color: red;
+    z-index: 10;
+}
+#footer ul{
+    text-decoration: none;
+    text-align: center;
+}
+#footer ul li{
+    display: inline-block;
+    color: black;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+#bg, #bg2, #bg3, #bg4{
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    position: fixed;
+    background-color: rgba(0,0,0,.88);
+    display: none;
+    z-index: 1;
+    opacity: 0;
+    transition: all 2s;
+}
+.produto{
+    height: 410px;
+    width: 300px;
+    background-color: rgb(0, 0, 0);
+    position: relative;
+    text-align: center;
+    border-radius: 20px;
+    margin: 35px;
+    top: -20px;
+}
+.produto img{
+    height: 265px;
+    width: 220px;
+}
+#corpo ul h1{
+    position: relative;
+    top: 10px;
+    font-size: 65px;
+    letter-spacing: 1px;
+    background: radial-gradient(rgb(255, 0, 0), rgb(60, 0, 255));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    
+}
+#corpo ul li{
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+    top: 50px;
+}
+#bg:target, #bg2:target, #bg3:target, #bg4:target{
+    display: block;
+    opacity: 1;
+}
+.info, .conteudo-mapa{
+    animation: aparecer 2s;
+}
+@keyframes aparecer{
+    0%{
+        opacity: 0;
+        transform: scale(0.8);
+    }
+}
+.info h1{
+    text-align: center;
+    position: relative;
+    top: 100px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 40px;
+    letter-spacing: 1px;
+    background: -webkit-linear-gradient(top, rgb(14, 16, 124), rgb(255, 0, 34));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.sair{
+    width: 80px;
+    height: 80px;
+    position: relative;
+    left: 93%;
+    top: -70px;
+    border-radius: 20px;
+}
+#comecoBg:target{
+    opacity: 0;
+    display: none;
+}
+.conteudo{
+    width: 1320px;
+    height: 500px;
+    background-color: rgb(15, 15, 15);
+    position: absolute;
+    left: 50%;
+    margin-left: -610px;
+    top: 280px;
+    border-radius: 50px;
+    display: inline-block;
+}
+.conteudo .produto-imagem{
+    width: 480px;
+    height: 360px;
+    float: left;
+    position: relative;
+    margin: 30px;
+}
+.conteudo ul li{
+    text-decoration: none;
+    margin: 15px;
+    font-size: 24px;
+    left: 2%;
+    top:50px;
+    position: relative;
+}
+.item-2 .produto{
+    position: relative;
+    top: -22px;
+}
+
+.item-3 .produto{
+    position: relative;
+    top: -155px;
+}
+.item-3 .produto img{
+    height: 150px;
+    width: 300px;
+    position: relative;
+    top: 45px;
+}
+.conteudo .produto-imagem-3{
+    width: 550px;
+    height: 330px;
+    float: left;
+    position: relative;
+    margin: 25px;
+}
+.item-3 .produto h3, .item-3 .produto h4{
+    position: relative;
+    top: 115px;
+}
+.logo-mapa{
+    width: 140px;
+    height: 110px;
+    border: 1px solid rgb(187, 6, 6);
+    border-radius: 30px;
+    position: fixed;
+    top: 85%;
+    left: 90%;
+}
+
+#dono{
+    width: 200px;
+    height: 220px;
+    border: 1px solid red;
+    border-radius: 130px;
+    position: relative;
+    margin: 15px;
+    left: 50%;
+    margin-left: -100px;
+    animation: rolar2 4s;
+}
+.centro{
+    text-align: center;
+    margin-top: -30px;
+    animation: rolar2 4s;
+}
+.sair-sobre{
+    width: 80px;
+    height: 80px;
+    position: relative;
+    left: 93%;
+    top: -100px;
+    border-radius: 20px;
+}
+.mapa{
+    background-color: rgb(15, 15, 15);
+    position: relative;
+    width: 800px;
+    height: 600px;
+    left: 50%;
+    margin-left: -400px;
+    border-radius: 40px;
+}
+.mapa iframe{
+    left: 50%;
+    position: relative;
+    width: 600px;
+    height: 450px;
+    margin-left: -300px;
+    top: 50%;
+    margin-top: -225px;
+    border-radius: 20px;
+}
+.conteudo-mapa h1{
+    text-align: center;
+    position: relative;
+    top: 30px;
+    font-size: 60px;
+    background: -webkit-linear-gradient(top, rgb(51, 54, 231), rgb(192, 21, 41));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+#sobre{
+    margin: 20px;
+    margin-top: 50px;
+    position: relative;
+    font-size: 24px;
+    animation: rolar 4s;
+}
+@keyframes rolar{
+    0%{
+        left: -1360px;
+        top: 0px;
+    }
+    50%{
+        color: royalblue;
+    }
+    80%{
+        color: violet;
+    }
+    100%{
+        left: 0px;
+    }
+}
+@keyframes rolar2{
+    0%{
+        left: 1560px;
+        top: 0px;
+    }
+    50%{
+        color: royalblue;
+    }
+    80%{
+        color: violet;
+    }
+    100%{
+        left: 50%;
+    }   
+}
+.titulo-contato{
+    font-size: 45px;
+    text-align: center;
+}
+form{
+    display: grid;
+}
+form a{
+    margin: 15px;
+    font-size: 20px;
+}
+form input, form textarea{
+    border-radius: 15px;
+}
+form #enviar{
+    position: relative;
+    width: 150px;
+    height: 60px;
+    border-radius: 20px;
+    left: 100%;
+    margin-left: -150px;
+    font-size: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: transparent;
+    background: -webkit-linear-gradient(top, rgb(51, 54, 231), rgb(192, 21, 41));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <title>Gamer's House - Contato</title>
+</head>
+<body>
+
+    <header>
+        <div id="logo"><a href="index.html">
+            <img src="imagens/logo.png" alt="">
+            <h1>Gamer's House</h1>
+            </a>
+        </div>
+    </header>
+
+    <div id="menu">
+
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="sobre.html">Sobre Nós</a></li>
+            <li><a href="index.html#itens">Produtos</a></li>
+            <li><a href="contato.html">Contato</a></li>
+        </ul>
+
+    </div>
+
+    <div id="corpo">
+
+        <h1 class="titulo-contato">Contate-nos</h1>
+
+        <form>
+
+           <a>Nome: <input type="text" name="nome" required></a>
+            <a>Sobrenome: <input type="text" name="sobrenome" required></a>
+            <a>Email: <input type="email" name="email" required></a>
+            <a>Motivo do contato: <textarea name="comment" rows="5" cols="40" required></textarea></a>
+            <input type="submit" id="enviar" onclick="alert('Caro '+nome.value+' '+sobrenome.value+', agradecemos o contato. Mandaremos um email para: '+email.value+' o mais rápido possível.')">
+
+        </form>
+
+    </div>
+    
+</body>
+</html>
